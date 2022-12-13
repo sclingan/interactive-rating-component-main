@@ -55,6 +55,8 @@
   }
 
   body {
+    display: grid;/* centers card , but then its not responsive */
+    place-content: center;
     background-color: hsl(0, 0%, 0%);
     color: var(--neutral-light-grey);
     font-family: var(--ff-body);
@@ -62,16 +64,11 @@
     font-size: 0.9375rem;
   }
 
-  main {
-    display: grid;
-    padding: 1rem;
-    overflow: hidden;
-  }
-
   .ratings-card {
     background-color: var(--neutral-very-dark-blue);
     padding: 1rem;
     border-radius: 1rem;
+    padding-bottom: 3rem;
   }
 
   .div--icon-star {
@@ -91,6 +88,7 @@
 
   p {
     color: var(--neutral-med-grey);
+    max-width: 30ch;/* check this */
   }
 
   ul {
@@ -100,11 +98,11 @@
     gap: 1rem;
     align-items: center;
     text-align: center;
-    // padding: 2rem;
     padding-block: 2rem;
     padding-left: 0;
   }
-
+  /* make li a button on each with hover
+     make each button with an id and name for javascript */
   li {
     border-radius: 50%;
     list-style-type: none;
@@ -114,6 +112,12 @@
     width: 3rem;
     height: 3rem;
     padding-top: 1rem;
+    cursor: pointer;
+  }
+
+  li:hover {
+    background-color: var(--primary-orange);
+    color: var(--neutral-white);
   }
 
   .submit-button {
@@ -127,6 +131,11 @@
     border-radius: 10rem;
     cursor: pointer;
   }
+
+  .submit-button:hover {
+    background-color: var(--neutral-white);
+    color: var(--primary-orange);
+}
 
   .thank-you-card {
     display: none;
