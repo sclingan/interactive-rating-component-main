@@ -65,6 +65,7 @@
   main {
     display: grid;
     padding: 1rem;
+    overflow: hidden;
   }
 
   .ratings-card {
@@ -79,11 +80,13 @@
     border-radius: 50%;
     height: 3rem;
     width: 3rem;
+    margin-block: 1rem;
   }
 
   h1 {
     color: var(--neutral-white);
     font-weight: var(--fw-700);
+    padding-block: 1rem;
   }
 
   p {
